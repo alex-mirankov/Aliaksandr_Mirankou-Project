@@ -1,0 +1,31 @@
+.navigation-list{
+    padding: 0;
+}
+
+.navigation-list_margin{
+    margin-left: 170px;
+    margin-bottom: 40px;
+}
+
+.navigation-list_font{
+    font-family: 'Gilroy-ExtraBold';
+}
+
+.navigation-list__link{
+    display: inline;
+    color: #ffffff;
+    font-size: 1.71rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navigation-list__link_hover:hover{
+    color: #feaf55;
+    transition: .5s;
+}
+
+.navigation-list__item{
+    display: inline;
+    list-style-type: none;
+    padding: 10px 30px 10px 0;
+}

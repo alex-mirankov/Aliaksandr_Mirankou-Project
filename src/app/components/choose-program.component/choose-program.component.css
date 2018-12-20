@@ -1,0 +1,26 @@
+.choose-program_margin{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.choose-program_styles{
+    text-align: center;
+}
+
+.choose-program__button{
+    width: 170px;
+    height: 44px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: none;
+    background-color: #feaf55;
+    cursor: pointer;
+    display: block;
+    margin: 200px auto 0 auto;
+
+    color: #fffefe;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center
+}

@@ -1,0 +1,32 @@
+.regist-enter__flex{
+    display: flex;
+}
+
+.regist-enter__size{
+    height: auto;
+}
+
+.regist-enter__margin{
+    margin-left: 170px;
+}
+
+.regist-enter__buttons{
+    width: 168px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    background-color: #ffffff;
+    text-align: center;
+    margin: 20px 10px 0 0;
+    font-size: 1.28rem;
+    font-weight: 400;
+    font-family: 'Gilroy-ExtraBold';
+    cursor: pointer;
+    color: #6f6464;
+}
+
+.regist-enter__buttons_hover:hover{
+    background-color: #feaf55;
+    color: #6f6464;
+    transition: .5s;
+}

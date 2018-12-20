@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'Gilroy-Light';
+    src: url('./fonts/gilroy-light.otf');
+}
+
+@font-face{
+    font-family: 'Gilroy-ExtraBold';
+    src: url('./fonts/gilroy-extra-bold.otf');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 14px;
+}

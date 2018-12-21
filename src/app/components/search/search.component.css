@@ -21,7 +21,7 @@
 
 .input-search__size {
     width: 269px;
-    height: 35px;
+    height: 40px;
 }
 
 .input-search__beauty {
@@ -30,6 +30,7 @@
     text-align: left;
     display: flex;
     outline: none;
+    margin-top: 12px;
 }
 
 .input-search_font {

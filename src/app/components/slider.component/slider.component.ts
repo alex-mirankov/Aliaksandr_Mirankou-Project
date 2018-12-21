@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component ({
-    // tslint:disable-next-line:component-selector
-    selector: 'my-slider',
+    selector: 'app-my-slider',
     templateUrl: 'slider.component.html',
     styleUrls: ['slider.component.css']
 })

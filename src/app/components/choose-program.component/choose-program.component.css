@@ -24,3 +24,44 @@
     font-weight: 400;
     text-align: center
 }
+
+.choose-program__header{
+    color: #000000;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 2.57rem;
+    font-weight: 400;
+    margin-bottom: 150px;
+}
+
+.select-level__size{
+    width: 270px;
+}
+
+.select-level__beauty {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    padding-right: 0; 
+}
+
+.select-level_font{
+    color: #000000;
+    font-family: 'Gilroy-Light';
+    font-size: 1.28rem;
+    font-weight: 300;
+}
+
+.select-level_margin{
+    margin-right: 70px;
+}
+
+.control__flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.control__size {
+    width: 1170px;
+    margin: 0 auto;
+}

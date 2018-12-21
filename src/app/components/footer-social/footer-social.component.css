@@ -1,0 +1,54 @@
+.social__size{
+    width: 210px;
+    height: auto;
+}
+
+.social__header{
+    color: #fffefe;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.social-list_font{
+    font-family: 'Gilroy-Light';
+}
+
+.social_margin{
+    margin-left: 170px;
+    margin-top: 20px;
+}
+
+.social-list__item{
+    display: inline;
+    list-style-type: none;
+    padding: 0 5px 0 0;
+}
+
+.social-list_margin{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.social-list__link{
+    cursor: pointer;
+}
+
+.social-list__image{
+    width: 35px;
+    height: 30px;
+}
+
+.social-list__image_fb {
+    background: url("../../../images/social-facebook.png") no-repeat;
+}
+
+.social-list__image_vb {
+    background: url("../../../images/social-viber.png") no-repeat;
+}
+
+.social-list__image_vk {
+    background: url("../../../images/social-vk.png") no-repeat;
+}

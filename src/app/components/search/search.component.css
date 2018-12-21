@@ -1,0 +1,40 @@
+.input-search__icon {
+  background: url("../../../images/input-search__icon.png") no-repeat;
+  width: 16px;
+  height: 17px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.input-search__input {
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'gilroy-light';
+  font-size: 1.28rem;
+  outline: none;
+}
+
+.input-search__size {
+    width: 269px;
+    height: 35px;
+}
+
+.input-search__beauty {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    outline: none;
+}
+
+.input-search_font {
+  color: #000000;
+  font-family: 'gilroy_light';
+  font-size: 1.28rem;
+  font-weight: 300;
+}

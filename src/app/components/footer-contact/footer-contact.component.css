@@ -1,0 +1,41 @@
+.contact-footer_margin{
+    margin-top: 20px;
+}
+
+.contact-footer__header{
+    color: #fffefe;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-footer__link{
+    display: flex;
+    color: #ffffff;
+    font-family: 'Gilroy-Light';
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-footer__link_hover:hover{
+    color: #feaf55;
+    transition: .5s;
+}
+
+.contact-footer__image{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.contact-footer__image_mail {
+    background: url("../../../images/social-mail.png") no-repeat;
+}
+
+.contact-footer__image_tel {
+    background: url("../../../images/social-telephone.png") no-repeat;
+}

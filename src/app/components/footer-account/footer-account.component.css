@@ -1,0 +1,26 @@
+.account-footer_margin{
+    margin-top: 20px;
+}
+
+.account-footer__header{
+    color: #fffefe;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.account-footer__link{
+    display: block;
+    color: #ffffff;
+    font-family: 'Gilroy-Light';
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.account-footer__link_hover:hover{
+    color: #feaf55;
+    transition: .5s;
+}

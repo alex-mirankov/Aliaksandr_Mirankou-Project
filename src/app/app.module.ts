@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './modules/material-module';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app.component';
 
@@ -24,6 +25,19 @@ import { FooterMainComponent } from './components/footer-main/footer-main.compon
 import { FooterAccountComponent } from './components/footer-account/footer-account.component';
 import { FooterContactComponent } from './components/footer-contact/footer-contact.component';
 import { SearchComponent } from './components/search/search.component';
+import { LessonPageMainComponent } from './components/lesson-page-main/lesson-page-main.component';
+import { LoginMainComponent } from './components/login-main/login-main.component';
+import { LoginComponent } from './components/login/login.component';
+import { HeaderOtherPagesComponent } from './components/header-other-pages/header-other-pages.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { RegistrationMainComponent } from './components/registration-main/registration-main.component';
+
+const appRoutes: Routes = [
+  { path: '', component: MainComponent, pathMatch: 'full' },
+  { path: 'slider', component: SliderComponent, pathMatch: 'full' },
+  { path: 'login', component: LoginMainComponent, pathMatch: 'full' },
+  { path: 'registration', component: RegistrationMainComponent, pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [
@@ -32,7 +46,8 @@ import { SearchComponent } from './components/search/search.component';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     AppComponent,
@@ -52,7 +67,13 @@ import { SearchComponent } from './components/search/search.component';
     FooterMainComponent,
     FooterAccountComponent,
     FooterContactComponent,
-    SearchComponent
+    SearchComponent,
+    LessonPageMainComponent,
+    LoginMainComponent,
+    LoginComponent,
+    HeaderOtherPagesComponent,
+    RegistrationComponent,
+    RegistrationMainComponent,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,14 @@
+.progress-navigation__size {
+    width: 370px;
+    height: 808px;
+}
+
+.progress-navigation_position {
+    margin-top: 100px;
+}
+
+.progress-navigation_beauty {
+    border-radius: 10px;
+    border: 1px solid #cfcdcd;
+    background-color: #fdfcfc;
+}

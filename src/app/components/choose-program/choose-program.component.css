@@ -10,19 +10,26 @@
 .choose-program__button{
     width: 170px;
     height: 44px;
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     border: none;
-    background-color: #feaf55;
     cursor: pointer;
     display: block;
     margin: 200px auto 0 auto;
 
     color: #fffefe;
     font-family: 'Gilroy-ExtraBold';
-    font-size: 1.1rem;
+    /*font-size: 1.1rem;*/
     font-weight: 400;
-    text-align: center
+    text-align: center;
+
+    background-color: #fb901d;
+    font-size: 1.28rem;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.choose-program__button_hover:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
 }
 
 .choose-program__header{

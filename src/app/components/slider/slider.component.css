@@ -5,6 +5,7 @@
 .slider__size{
     width: 100%;
     min-width: 1170px;
+    width: 1170px;
     height: 600px;
 }
 
@@ -35,7 +36,7 @@
     font-weight: 300;
     color: #fffefe;
     font-size: 2.14rem;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .description-slider__main{
@@ -44,25 +45,28 @@
     font-size: 1.28rem;
     font-weight: 300;
     margin-bottom: 60px;
+
+    width: 320px;
 }
 
 .description-slider__button{
     width: 170px;
     height: 44px;
     border-radius: 10px;
-    background-color: #feaf55;
+    background-color: #fb901d;
     border: none;
     color: #fffefe;
-    font-family: 'Gilroy-ExtraBold';
+    font-family: "Gilroy-ExtraBold";
     font-size: 1.28rem;
     font-weight: 400;
     cursor: pointer;
+    outline: none;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 .description-slider__button_hover:hover{
-    color: #6f6464;
-    background: #ffffff;
-    transition: .5s;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: 0.7s
 }
 
 .image-slider__size{
@@ -77,6 +81,5 @@
 
 .image-slider_back-styles{
     background: url("../../../images/image-slider__guy.png");
-
     opacity: 0.94;
 }

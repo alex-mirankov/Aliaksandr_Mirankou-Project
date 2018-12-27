@@ -31,12 +31,20 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderOtherPagesComponent } from './components/header-other-pages/header-other-pages.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { RegistrationMainComponent } from './components/registration-main/registration-main.component';
+import { LessonPageContentComponent } from './components/lesson-page-content/lesson-page-content.component';
+import { HomeWorkComponent } from './components/home-work/home-work.component';
+import { LessonPageInfoComponent } from './components/lesson-page-info/lesson-page-info.component';
+import { LessonPageCompileComponent } from './components/lesson-page-compile/lesson-page-compile.component';
+import { LessonSideComponent } from './components/lesson-side/lesson-side.component';
+import { LessonSideListComponent } from './components/lesson-side-list/lesson-side-list.component';
+import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
+import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
-  { path: 'slider', component: SliderComponent, pathMatch: 'full' },
   { path: 'login', component: LoginMainComponent, pathMatch: 'full' },
-  { path: 'registration', component: RegistrationMainComponent, pathMatch: 'full' }
+  { path: 'registration', component: RegistrationMainComponent, pathMatch: 'full' },
+  { path: 'lesson', component: LessonPageMainComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -74,6 +82,14 @@ const appRoutes: Routes = [
     HeaderOtherPagesComponent,
     RegistrationComponent,
     RegistrationMainComponent,
+    LessonPageContentComponent,
+    HomeWorkComponent,
+    LessonPageInfoComponent,
+    LessonPageCompileComponent,
+    LessonSideComponent,
+    LessonSideListComponent,
+    LessonSideItemComponent,
+    LessonSideHeaderComponent,
   ],
   bootstrap: [AppComponent]
 })

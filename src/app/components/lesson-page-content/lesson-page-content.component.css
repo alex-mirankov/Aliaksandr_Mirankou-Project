@@ -22,5 +22,9 @@
 
 .main_content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.page_BUG {
+    width: 800px;
 }

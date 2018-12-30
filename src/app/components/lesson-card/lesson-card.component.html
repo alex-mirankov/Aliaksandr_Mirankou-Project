@@ -1,9 +1,9 @@
 <a routerLink = "lesson">
   <div class="card card_margin card__style card__style_hover card__size">
   <div class="card-header card-header__size card-header_back-style">
-    <p class="card-header__main">Основы Java</p>
+    <p class="card-header__main">{{Name}}</p>
     <p class="card-header__content">
-      <span class="card-header__span">Уровень:</span> начинающий</p>
+      <span class="card-header__span">Уровень:</span> {{Level}}</p>
   </div>
   <div class="card-image card-image__flex card-image__size">
     <div class="card-image__img-Java"></div>
@@ -12,11 +12,11 @@
   <div class="card-info card-info_margin">
     <div class="card-info__flex">
       <p class="card-info__elem1">Количество студентов:</p>
-      <p class="card-info__elem1 card-info__elem1_margin"> 5</p>
+      <p class="card-info__elem1 card-info__elem1_margin"> {{Students}}</p>
     </div>
     <div class="card-info__flex">
       <p class="card-info__elem2">Изучили курс:</p>
-      <p class="card-info__elem2 card-info__elem1_margin"> 3</p>
+      <p class="card-info__elem2 card-info__elem1_margin"> {{WellStudents}}</p>
     </div>
   </div>
   <div class="card-cost card-cost_margin card-cost__flex">
@@ -26,7 +26,7 @@
     </div>
     <div class="card-cost__cost">
       <p class="card-cost__text-cost">Цена</p>
-      <p class="card-cost__number">23 $</p>
+      <p class="card-cost__number">{{Price}}</p>
     </div>
   </div>
 </div>

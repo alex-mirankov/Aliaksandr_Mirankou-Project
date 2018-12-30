@@ -61,7 +61,8 @@
 .card-image__img-Java{
     width: 193px;
     height: 163px;
-    background: url("../../../images/java-img-start.png") no-repeat;
+    /*background: url("../../../images/java-img-start.png") no-repeat;*/
+    background: url("https://hostingkartinok.com/show-image.php?id=9d2cac016b7590ebc2e485eb67d224b7") no-repeat;
 }
 
 .card__hr{

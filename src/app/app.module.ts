@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DemoMaterialModule } from './modules/material-module';
+import { DemoMaterialModule } from './material-module';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app.component';
@@ -39,12 +39,13 @@ import { LessonSideComponent } from './components/lesson-side/lesson-side.compon
 import { LessonSideListComponent } from './components/lesson-side-list/lesson-side-list.component';
 import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
 import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
+import { LocalStoreService } from './services/local-store.service';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
-  { path: 'login', component: LoginMainComponent, pathMatch: 'full' },
-  { path: 'registration', component: RegistrationMainComponent, pathMatch: 'full' },
-  { path: 'lesson', component: LessonPageMainComponent, pathMatch: 'full' }
+  { path: 'login', component: LoginMainComponent},
+  { path: 'registration', component: RegistrationMainComponent},
+  { path: 'lesson', component: LessonPageMainComponent}
 ];
 
 @NgModule({
@@ -55,7 +56,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
   ],
   declarations: [
     AppComponent,
@@ -91,7 +92,8 @@ const appRoutes: Routes = [
     LessonSideItemComponent,
     LessonSideHeaderComponent,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [LocalStoreService],
 })
 
 export class AppModule {

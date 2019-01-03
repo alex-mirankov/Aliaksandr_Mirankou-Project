@@ -5,6 +5,8 @@ export interface Themes {
   viewValue: string;
 }
 
+export const themes = [];
+
 @Component({
   selector: 'app-select-theme',
   templateUrl: './select-theme.component.html',

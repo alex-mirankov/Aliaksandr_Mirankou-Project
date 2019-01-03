@@ -5,7 +5,6 @@ export interface Levels {
   viewValue: string;
 }
 
-
 @Component({
   selector: 'app-select-level',
   templateUrl: './select-level.component.html',

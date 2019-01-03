@@ -39,6 +39,7 @@ import { LessonSideComponent } from './components/lesson-side/lesson-side.compon
 import { LessonSideListComponent } from './components/lesson-side-list/lesson-side-list.component';
 import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
 import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
+
 import { LocalStoreService } from './services/local-store.service';
 
 const appRoutes: Routes = [
@@ -52,8 +53,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     DemoMaterialModule,
-    FormsModule,
     BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),

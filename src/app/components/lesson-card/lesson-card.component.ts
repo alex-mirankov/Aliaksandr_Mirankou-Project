@@ -18,5 +18,7 @@ export class LessonCardComponent implements OnInit {
   Students = this.JavaJun.students;
   WellStudents = this.JavaJun.well_students;
   Price = this.JavaJun.price;
+  Image = this.JavaJun.image;
+
 }
 

@@ -1,5 +1,5 @@
 <mat-form-field>
-  <mat-select placeholder="Все категории">
+  <mat-select [ngModel]="selectedTheme" (ngModelChange)="onChange($event)" placeholder="Все категории">
     <mat-option *ngFor="let theme of themes" [value]="theme.value">
       {{theme.viewValue}}
     </mat-option>

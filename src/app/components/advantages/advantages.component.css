@@ -4,6 +4,10 @@
     flex-wrap: wrap;
 }
 
+.advantages__size {
+    min-width: 1170px;
+}
+
 .list-advantages_margin{
     margin-top: 100px;
 }

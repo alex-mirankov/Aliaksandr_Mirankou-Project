@@ -39,14 +39,18 @@ import { LessonSideComponent } from './components/lesson-side/lesson-side.compon
 import { LessonSideListComponent } from './components/lesson-side-list/lesson-side-list.component';
 import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
 import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { LocalStoreService } from './services/local-store.service';
+import { GetCardsService } from './services/get-cards.service';
+import { ShareService } from './services/shared.service';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
-  { path: 'login', component: LoginMainComponent},
-  { path: 'registration', component: RegistrationMainComponent},
-  { path: 'lesson', component: LessonPageMainComponent}
+  { path: 'login', component: LoginMainComponent },
+  { path: 'registration', component: RegistrationMainComponent },
+  { path: 'lesson/:id', component: LessonPageMainComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
@@ -92,9 +96,13 @@ const appRoutes: Routes = [
     LessonSideListComponent,
     LessonSideItemComponent,
     LessonSideHeaderComponent,
+    NotFoundComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [LocalStoreService],
+  providers: [LocalStoreService,
+              GetCardsService,
+              ShareService
+             ],
 })
 
 export class AppModule {

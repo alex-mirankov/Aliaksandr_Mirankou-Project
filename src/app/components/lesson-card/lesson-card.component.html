@@ -1,33 +1,33 @@
-<a routerLink = "lesson">
+<a [routerLink]="['lesson', item.id]" *ngFor="let item of items">
   <div class="card card_margin card__style card__style_hover card__size">
-  <div class="card-header card-header__size card-header_back-style">
-    <p class="card-header__main">{{Name}}</p>
-    <p class="card-header__content">
-      <span class="card-header__span">Уровень:</span> {{Level}}</p>
-  </div>
-  <div class="card-image card-image__flex card-image__size">
-    <img class="card-image__img-Java" [src]="Image"/>
-  </div>
-  <div class="card__hr"></div>
-  <div class="card-info card-info_margin">
-    <div class="card-info__flex">
-      <p class="card-info__elem1">Количество студентов:</p>
-      <p class="card-info__elem1 card-info__elem1_margin"> {{Students}}</p>
+    <div class="card-header card-header__size card-header_back-style">
+      <p class="card-header__main">{{item.name}}</p>
+      <p class="card-header__content">
+        <span class="card-header__span">Уровень:</span> {{item.level}}</p>
     </div>
-    <div class="card-info__flex">
-      <p class="card-info__elem2">Изучили курс:</p>
-      <p class="card-info__elem2 card-info__elem1_margin"> {{WellStudents}}</p>
+    <div class="card-image card-image__flex card-image__size">
+      <img class="card-image__img-Java" src="https://unsplash.it/300/200/?random" />
+    </div>
+    <div class="card__hr"></div>
+    <div class="card-info card-info_margin">
+      <div class="card-info__flex">
+        <p class="card-info__elem1">Количество студентов:</p>
+        <p class="card-info__elem1 card-info__elem1_margin"> {{item.students}}</p>
+      </div>
+      <div class="card-info__flex">
+        <p class="card-info__elem2">Изучили курс:</p>
+        <p class="card-info__elem2 card-info__elem1_margin"> {{item.well_students}}</p>
+      </div>
+    </div>
+    <div class="card-cost card-cost_margin card-cost__flex">
+      <div class="card-cost__teacher">
+        <p class="card-cost__text-teacher">Учителя</p>
+        <div class="card-cost__image"></div>
+      </div>
+      <div class="card-cost__cost">
+        <p class="card-cost__text-cost">Цена</p>
+        <p class="card-cost__number">{{item.price}}</p>
+      </div>
     </div>
   </div>
-  <div class="card-cost card-cost_margin card-cost__flex">
-    <div class="card-cost__teacher">
-      <p class="card-cost__text-teacher">Учителя</p>
-      <div class="card-cost__image"></div>
-    </div>
-    <div class="card-cost__cost">
-      <p class="card-cost__text-cost">Цена</p>
-      <p class="card-cost__number">{{Price}}</p>
-    </div>
-  </div>
-</div>
 </a>

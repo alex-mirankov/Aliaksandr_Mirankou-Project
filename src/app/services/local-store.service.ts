@@ -10,10 +10,10 @@ const JavaJun = {
   name: 'Основы Java',
   level: 'начинающий',
   students: 10,
-  image: 'https://drive.google.com/open?id=1xT39RlF-BRIJLhOpbbw1lQXu0JUGH39Y',
+  image: '../../images/javascript1-img-start.png',
   well_students: 17,
   price: '25$',
-  id: 1
+  id: 'JavaJun'
 };
 
 const JavaMiddle = {
@@ -23,7 +23,7 @@ const JavaMiddle = {
   image: 'https://drive.google.com/open?id=1xT39RlF-BRIJLhOpbbw1lQXu0JUGH39Y',
   well_students: 25,
   price: '50$',
-  id: 2
+  id: 'JavaMiddle'
 };
 
 const JavaSenior = {
@@ -33,7 +33,7 @@ const JavaSenior = {
   image: 'https://drive.google.com/open?id=1xT39RlF-BRIJLhOpbbw1lQXu0JUGH39Y',
   well_students: 10,
   price: '100$',
-  id: 3
+  id: 'JavaSenior'
 };
 
 const CSharpJun = {
@@ -43,7 +43,7 @@ const CSharpJun = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 46,
   price: '43$',
-  id: 4
+  id: 'CSharpJun'
 };
 
 const CSharpMiddle = {
@@ -53,7 +53,7 @@ const CSharpMiddle = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 187,
   price: '86$',
-  id: 5
+  id: 'CSharpMiddle'
 };
 
 const CSharpSenior = {
@@ -63,7 +63,7 @@ const CSharpSenior = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 10,
   price: '150$',
-  id: 6
+  id: 'CSharpSenior'
 };
 
 const JavaScriptJun = {
@@ -73,7 +73,7 @@ const JavaScriptJun = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 57,
   price: '74$',
-  id: 7
+  id: 'JavaScriptJun'
 };
 
 const JavaScriptMiddle = {
@@ -83,7 +83,7 @@ const JavaScriptMiddle = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 187,
   price: '158$',
-  id: 8
+  id: 'JavaScriptMiddle'
 };
 
 const JavaScriptSenior = {
@@ -93,7 +93,7 @@ const JavaScriptSenior = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 46,
   price: '200$',
-  id: 9
+  id: 'JavaScriptSenior'
 };
 
 const CPlusJun = {
@@ -103,7 +103,7 @@ const CPlusJun = {
   image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
   well_students: 112,
   price: '54$',
-  id: 10
+  id: 'CPlusJun'
 };
 
 const CPlusMiddle = {
@@ -113,7 +113,7 @@ const CPlusMiddle = {
   image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
   well_students: 78,
   price: '90$',
-  id: 11
+  id: 'CPlusMiddle'
 };
 
 const CPlusSenior = {
@@ -123,7 +123,7 @@ const CPlusSenior = {
   image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
   well_students: 321,
   price: '165$',
-  id: 12
+  id: 'CPlusSenior'
 };
 
 const SQLJun = {
@@ -133,7 +133,7 @@ const SQLJun = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 245,
   price: '76$',
-  id: 13
+  id: 'SQLJun'
 };
 
 const SQLMiddle = {
@@ -143,7 +143,7 @@ const SQLMiddle = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 54,
   price: '90$',
-  id: 14
+  id: 'SQLMiddle'
 };
 
 const SQLSenior = {
@@ -153,7 +153,7 @@ const SQLSenior = {
   image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
   well_students: 321,
   price: '165$',
-  id: 15
+  id: 'SQLSenior'
 };
 
 const HTMLCSSJun = {
@@ -163,7 +163,7 @@ const HTMLCSSJun = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 300,
   price: '50$',
-  id: 16
+  id: 'HTMLCSSJun'
 };
 
 const HTMLCSSMiddle = {
@@ -173,7 +173,7 @@ const HTMLCSSMiddle = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 243,
   price: '100$',
-  id: 17
+  id: 'HTMLCSSMiddle'
 };
 
 const HTMLCSSSenior = {
@@ -183,7 +183,7 @@ const HTMLCSSSenior = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 114,
   price: '165$',
-  id: 18
+  id: 'HTMLCSSSenior'
 };
 
 const PythonJun = {
@@ -193,7 +193,7 @@ const PythonJun = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 60,
   price: '70$',
-  id: 19
+  id: 'PythonJun'
 };
 
 const PythonMiddle = {
@@ -203,7 +203,7 @@ const PythonMiddle = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 80,
   price: '100$',
-  id: 20
+  id: 'PythonMiddle'
 };
 
 const PythonSenior = {
@@ -213,7 +213,7 @@ const PythonSenior = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 40,
   price: '200$',
-  id: 21
+  id: 'PythonSenior'
 };
 
 const AndroidJun = {
@@ -223,7 +223,7 @@ const AndroidJun = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 253,
   price: '50$',
-  id: 22
+  id: 'AndroidJun'
 };
 
 const AndroidMiddle = {
@@ -233,7 +233,7 @@ const AndroidMiddle = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 157,
   price: '100$',
-  id: 23
+  id: 'AndroidMiddle'
 };
 
 const AndroidSenior = {
@@ -243,7 +243,7 @@ const AndroidSenior = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 47,
   price: '150$',
-  id: 24
+  id: 'AndroidSenior'
 };
 
 const iOSJun = {
@@ -253,7 +253,7 @@ const iOSJun = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 263,
   price: '70$',
-  id: 25
+  id: 'iOSJun'
 };
 
 const iOSMiddle = {
@@ -263,7 +263,7 @@ const iOSMiddle = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 117,
   price: '120$',
-  id: 26
+  id: 'iOSMiddle'
 };
 
 const iOSSenior = {
@@ -273,12 +273,15 @@ const iOSSenior = {
   image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
   well_students: 76,
   price: '170$',
-  id: 27
+  id: 'iOSSenior'
 };
 
-export const setJavaJun = localStorage.setItem('JavaJun', JSON.stringify(JavaJun));
+const setJavaJun = localStorage.setItem('JavaJun', JSON.stringify(JavaJun));
 const setJavaMiddle = localStorage.setItem('JavaMiddle', JSON.stringify(JavaMiddle));
 const setJavaSenior = localStorage.setItem('JavaSenior', JSON.stringify(JavaSenior));
+const setCSharpJun = localStorage.setItem('CSharpJun', JSON.stringify(CSharpJun));
+const setCSharpMiddle = localStorage.setItem('CSharpMiddle', JSON.stringify(CSharpMiddle));
+const setCSharpSenior = localStorage.setItem('CSharpSenior', JSON.stringify(CSharpSenior));
 const setJavaScriptJun = localStorage.setItem('JavaScriptJun', JSON.stringify(JavaScriptJun));
 const setJavaScriptMiddle = localStorage.setItem('JavaScriptMiddle', JSON.stringify(JavaScriptMiddle));
 const setJavaScriptSenior = localStorage.setItem('JavaScriptSenior', JSON.stringify(JavaScriptSenior));

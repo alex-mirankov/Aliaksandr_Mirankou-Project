@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-
+    workouts = ['111fsfd','22fsfd','sdfsfd','sdfsfd']
+    onChange(e) {
+        console.log(e);
+    }
 }

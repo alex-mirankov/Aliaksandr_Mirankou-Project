@@ -1,5 +1,6 @@
 .header__size{
     height: 800px;
+    min-width: 1170px;
 }
 
 .header_back-styles{

@@ -11,6 +11,10 @@
     justify-content: space-around;
 }
 
+.page__side {
+    width: 35%;
+}
+
 .main__size {
     width: 1170px;
 }

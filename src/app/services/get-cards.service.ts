@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 
 function getPromiseLocalStorage(itemLocalStorage) {

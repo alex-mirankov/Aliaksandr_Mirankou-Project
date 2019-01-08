@@ -47,7 +47,11 @@ import { GetCardsService } from './services/get-cards.service';
 import { ShareService } from './services/shared.service';
 import { LocalStoreLessonsService } from './services/local-store-lessons';
 import { GetLessonsService } from './services/get-lessons.service';
-
+import { LocalStoreNavLessonsService } from './services/local-store-nav-lesson';
+import { GetNavLessonsService } from './services/get-nav-lessons';
+import { PathFieldsService } from './services/path-fields.service';
+import { NavNameLessonsService } from './services/local-store-nav-name.service';
+import { GetNavNameLessonsService } from './services/get-nav-name.service';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
@@ -109,6 +113,11 @@ const appRoutes: Routes = [
               ShareService,
               LocalStoreLessonsService,
               GetLessonsService,
+              LocalStoreNavLessonsService,
+              GetNavLessonsService,
+              PathFieldsService,
+              NavNameLessonsService,
+              GetNavNameLessonsService,
              ],
 })
 

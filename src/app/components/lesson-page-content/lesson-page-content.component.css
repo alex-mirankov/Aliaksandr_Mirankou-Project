@@ -12,10 +12,6 @@
     flex-wrap: wrap;
 }
 
-.main__size {
-    width: 1170px;
-}
-
 .main_margin {
     margin: 0 auto;
 }
@@ -25,6 +21,6 @@
     justify-content: space-between;
 }
 
-.page_BUG {
-    width: 800px;
+.page__size {
+    width: 80%;
 }

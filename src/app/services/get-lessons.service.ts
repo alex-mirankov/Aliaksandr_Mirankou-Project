@@ -13,136 +13,163 @@ export class GetLessonsService {
   getLessonJavaJun() {
     this.clearLesson();
     this.lessons.push(getJavaJunLesson);
+    console.log(getJavaJunLesson);
   }
 
   getLessonJavaMiddle() {
     this.clearLesson();
     this.lessons.push(getJavaMiddleLesson);
+    console.log(getJavaMiddleLesson);
   }
 
   getLessonJavaSenior() {
     this.clearLesson();
     this.lessons.push(getJavaSeniorLesson);
+    console.log(getJavaSeniorLesson);
   }
 
   getLessonCSharpJun() {
     this.clearLesson();
     this.lessons.push(getCSharpJunLesson);
+    console.log(getCSharpJunLesson);
   }
 
   getLessonCSharpMiddle() {
     this.clearLesson();
     this.lessons.push(getCSharpMiddleLesson);
+    console.log(getCSharpMiddleLesson);
   }
 
   getLessonCSharpSenior() {
     this.clearLesson();
     this.lessons.push(getCSharpSeniorLesson);
+    console.log(getCSharpSeniorLesson);
   }
 
   getLessonJavaScriptJun() {
     this.clearLesson();
     this.lessons.push(getJavaScriptJunLesson);
+    console.log(getJavaScriptJunLesson);
   }
 
   getLessonJavaScriptMiddle() {
     this.clearLesson();
     this.lessons.push(getJavaScriptMiddleLesson);
+    console.log(getJavaScriptMiddleLesson);
   }
 
   getLessonJavaScriptSenior() {
     this.clearLesson();
     this.lessons.push(getJavaScriptSeniorLesson);
+    console.log(getJavaScriptSeniorLesson);
   }
 
   getLessonCPlusJun() {
     this.clearLesson();
     this.lessons.push(getCPlusJunLesson);
+    console.log(getCPlusJunLesson);
   }
 
   getLessonCPlusMiddle() {
     this.clearLesson();
     this.lessons.push(getCPlusMiddleLesson);
+    console.log(getCPlusMiddleLesson);
   }
 
   getLessonCPlusSenior() {
     this.clearLesson();
     this.lessons.push(getCPlusSeniorLesson);
+    console.log(getCPlusSeniorLesson);
   }
 
   getLessonSQLJun() {
     this.clearLesson();
     this.lessons.push(getSQLJunLesson);
+    console.log(getSQLJunLesson);
   }
 
   getLessonSQLMiddle() {
     this.clearLesson();
     this.lessons.push(getSQLMiddleLesson);
+    console.log(getSQLMiddleLesson);
   }
 
   getLessonSQLSenior() {
     this.clearLesson();
     this.lessons.push(getSQLSeniorLesson);
+    console.log(getSQLSeniorLesson);
   }
 
   getLessonHTMLCSSJun() {
     this.clearLesson();
     this.lessons.push(getHTMLCSSJunLesson);
+    console.log(getHTMLCSSJunLesson);
   }
 
   getLessonHTMLCSSMiddle() {
     this.clearLesson();
     this.lessons.push(getHTMLCSSMiddleLesson);
+    console.log(getHTMLCSSMiddleLesson);
   }
 
   getLessonHTMLCSSSenior() {
     this.clearLesson();
     this.lessons.push(getHTMLCSSSeniorLesson);
+    console.log(getHTMLCSSSeniorLesson);
   }
 
   getLessonPythonJun() {
     this.clearLesson();
     this.lessons.push(getPythonJunLesson);
+    console.log(getPythonJunLesson);
   }
 
   getLessonPythonMiddle() {
     this.clearLesson();
     this.lessons.push(getPythonMiddleLesson);
+    console.log(getPythonMiddleLesson);
   }
 
   getLessonPythonSenior() {
     this.clearLesson();
     this.lessons.push(getPythonSeniorLesson);
+    console.log(getPythonSeniorLesson);
   }
 
   getLessonAndroidJun() {
     this.clearLesson();
     this.lessons.push(getAndroidJunLesson);
+    console.log(getAndroidJunLesson);
   }
 
   getLessonAndroidMiddle() {
     this.clearLesson();
     this.lessons.push(getAndroidMiddleLesson);
+    console.log(getAndroidMiddleLesson);
   }
 
   getLessonAndroidSenior() {
     this.clearLesson();
     this.lessons.push(getAndroidSeniorLesson);
+    console.log(getAndroidSeniorLesson);
   }
 
   getLessonIOSJun() {
     this.clearLesson();
     this.lessons.push(getIOSJunLesson);
+    console.log(getIOSJunLesson);
   }
 
   getLessonIOSMiddle() {
     this.clearLesson();
     this.lessons.push(getIOSMiddleLesson);
+    console.log(getIOSMiddleLesson);
   }
 
   getLessonIOSSenior() {
     this.clearLesson();
     this.lessons.push(getIOSSeniorLesson);
+    console.log(getIOSSeniorLesson);
   }
 }
 

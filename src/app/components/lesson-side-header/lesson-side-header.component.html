@@ -4,5 +4,7 @@
 </div>
 <div class="progress-navigation-lesson progress-navigation-lesson_content">
   <div class="progress-navigation-lesson__div"></div>
-  <p class="progress-navigation-lesson__p">Java Skill</p>
+  <p class="progress-navigation-lesson__p" *ngFor = "let name of names">
+    {{name}}
+  </p>
 </div>

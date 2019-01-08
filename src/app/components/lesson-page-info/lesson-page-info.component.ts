@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GetLessonsService } from '../../services/get-lessons.service';
+import { PathFieldsService } from '../../services/path-fields.service';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lesson-page-info',
@@ -7,121 +10,96 @@ import { GetLessonsService } from '../../services/get-lessons.service';
   styleUrls: ['./lesson-page-info.component.css']
 })
 export class LessonPageInfoComponent implements OnInit {
+  private sub: Subscription;
+  private id: string;
 
+  constructor(private array: GetLessonsService, private paths: PathFieldsService, private activeRouts: ActivatedRoute) {
+    this.sub = activeRouts.params.subscribe(params => this.id = params['id']);
+  }
   private lessons = this.array.lessons;
-
   private path = window.location.pathname;
-  private javaJun = '/lesson/JavaJun';
-  private javaJMiddle = '/lesson/JavaMiddle';
-  private javaSenior = '/lesson/JavaSenior';
-  private сSharpJun = '/lesson/CSharpJun';
-  private сSharpMiddle = '/lesson/CSharpMiddle';
-  private сSharpSenior = '/lesson/CSharpSenior';
-  private javaScriptJun = '/lesson/JavaScriptJun';
-  private javaScriptMiddle = '/lesson/JavaScriptMiddle';
-  private javaScriptSenior = '/lesson/JavaScriptSenior';
-  private cPlusJun = '/lesson/CPlusJun';
-  private cPlusMiddle = '/lesson/CPlusMiddle';
-  private cPlusSenior = '/lesson/CPlusSenior';
-  private sQLJun = '/lesson/SQLJun';
-  private sQLMiddle = '/lesson/SQLMiddle';
-  private sQLSenior = '/lesson/SQLSenior';
-  private hTMLCSSJun = '/lesson/HTMLCSSJun';
-  private hTMLCSSMiddle = '/lesson/HTMLCSSMiddle';
-  private hTMLCSSSenior = '/lesson/HTMLCSSSenior';
-  private pythonJun = '/lesson/PythonJun';
-  private pythonMiddle = '/lesson/PythonMiddle';
-  private pythonSenior = '/lesson/PythonSenior';
-  private androidJun = '/lesson/AndroidJun';
-  private androidMiddle = '/lesson/AndroidMiddle';
-  private androidSenior = '/lesson/AndroidSenior';
-  private iOSJun = '/lesson/iOSJun';
-  private iOSMiddle = '/lesson/iOSJun';
-  private iOSSenior = '/lesson/iOSJun';
-
-  constructor(private array: GetLessonsService) { }
 
   loadContentLesson() {
     switch (this.path) {
-      case this.javaJun:
+      case this.paths.javaJun:
         this.array.getLessonJavaJun();
         break;
-      case this.javaJMiddle:
+      case this.paths.javaMiddle:
         this.array.getLessonJavaMiddle();
         break;
-      case this.javaSenior:
+      case this.paths.javaSenior:
         this.array.getLessonJavaSenior();
         break;
-      case this.сSharpJun:
+      case this.paths.сSharpJun:
         this.array.getLessonCSharpJun();
         break;
-      case this.сSharpMiddle:
+      case this.paths.сSharpMiddle:
         this.array.getLessonCSharpMiddle();
         break;
-      case this.сSharpSenior:
+      case this.paths.сSharpSenior:
         this.array.getLessonCSharpSenior();
         break;
-      case this.javaScriptJun:
+      case this.paths.javaScriptJun:
         this.array.getLessonJavaScriptJun();
         break;
-      case this.javaScriptMiddle:
+      case this.paths.javaScriptMiddle:
         this.array.getLessonJavaScriptMiddle();
         break;
-      case this.javaScriptSenior:
+      case this.paths.javaScriptSenior:
         this.array.getLessonJavaScriptSenior();
         break;
-      case this.cPlusJun:
+      case this.paths.cPlusJun:
         this.array.getLessonCPlusJun();
         break;
-      case this.cPlusMiddle:
+      case this.paths.cPlusMiddle:
         this.array.getLessonCPlusMiddle();
         break;
-      case this.cPlusSenior:
+      case this.paths.cPlusSenior:
         this.array.getLessonCPlusSenior();
         break;
-      case this.sQLJun:
+      case this.paths.sQLJun:
         this.array.getLessonSQLJun();
         break;
-      case this.sQLMiddle:
+      case this.paths.sQLMiddle:
         this.array.getLessonSQLMiddle();
         break;
-      case this.sQLSenior:
+      case this.paths.sQLSenior:
         this.array.getLessonSQLSenior();
         break;
-      case this.hTMLCSSJun:
+      case this.paths.hTMLCSSJun:
         this.array.getLessonHTMLCSSJun();
         break;
-      case this.hTMLCSSMiddle:
+      case this.paths.hTMLCSSMiddle:
         this.array.getLessonHTMLCSSMiddle();
         break;
-      case this.hTMLCSSSenior:
+      case this.paths.hTMLCSSSenior:
         this.array.getLessonHTMLCSSSenior();
         break;
-      case this.pythonJun:
+      case this.paths.pythonJun:
         this.array.getLessonPythonJun();
         break;
-      case this.pythonMiddle:
+      case this.paths.pythonMiddle:
         this.array.getLessonPythonMiddle();
         break;
-      case this.pythonSenior:
+      case this.paths.pythonSenior:
         this.array.getLessonPythonSenior();
         break;
-      case this.androidJun:
+      case this.paths.androidJun:
         this.array.getLessonAndroidJun();
         break;
-      case this.androidMiddle:
+      case this.paths.androidMiddle:
         this.array.getLessonAndroidMiddle();
         break;
-      case this.androidSenior:
+      case this.paths.androidSenior:
         this.array.getLessonAndroidSenior();
         break;
-      case this.iOSJun:
+      case this.paths.iOSJun:
         this.array.getLessonIOSJun();
         break;
-      case this.iOSMiddle:
+      case this.paths.iOSMiddle:
         this.array.getLessonIOSMiddle();
         break;
-      case this.iOSSenior:
+      case this.paths.iOSSenior:
         this.array.getLessonIOSSenior();
         break;
     }

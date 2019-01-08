@@ -10,270 +10,297 @@ const JavaJun = {
   name: 'Основы Java',
   level: 'начинающий',
   students: 10,
-  image: '../../images/javascript1-img-start.png',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 17,
   price: '25$',
-  id: 'JavaJun'
+  id: 'JavaJun',
+  alt: 'java-start-image'
 };
 
 const JavaMiddle = {
   name: 'Средний Java',
   level: 'средний',
   students: 8,
-  image: 'https://drive.google.com/open?id=1xT39RlF-BRIJLhOpbbw1lQXu0JUGH39Y',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 25,
   price: '50$',
-  id: 'JavaMiddle'
+  id: 'JavaMiddle',
+  alt: 'java-middle-image'
 };
 
 const JavaSenior = {
   name: 'Продвинутый Java',
   level: 'продвинутый',
   students: 5,
-  image: 'https://drive.google.com/open?id=1xT39RlF-BRIJLhOpbbw1lQXu0JUGH39Y',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 10,
   price: '100$',
-  id: 'JavaSenior'
+  id: 'JavaSenior',
+  alt: 'java-senior-image'
 };
 
 const CSharpJun = {
   name: 'Основы C#',
   level: 'начальный',
   students: 20,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 46,
   price: '43$',
-  id: 'CSharpJun'
+  id: 'CSharpJun',
+  alt: 'chsarp-start-image'
 };
 
 const CSharpMiddle = {
   name: 'Средний C#',
   level: 'средний',
   students: 14,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/D4p9WLx/csharp-img-start.png',
   well_students: 187,
   price: '86$',
-  id: 'CSharpMiddle'
+  id: 'CSharpMiddle',
+  alt: 'chsarp-middle-image'
 };
 
 const CSharpSenior = {
   name: 'Продвинутый C#',
   level: 'продвинутый',
   students: 5,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/D4p9WLx/csharp-img-start.png',
   well_students: 10,
   price: '150$',
-  id: 'CSharpSenior'
+  id: 'CSharpSenior',
+  alt: 'chsarp-senior-image'
 };
 
 const JavaScriptJun = {
   name: 'Основы JavaScript',
   level: 'начальный',
   students: 15,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 57,
   price: '74$',
-  id: 'JavaScriptJun'
+  id: 'JavaScriptJun',
+  alt: 'js-start-image'
 };
 
 const JavaScriptMiddle = {
   name: 'Средний JavaScript',
   level: 'средний',
   students: 14,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 187,
   price: '158$',
-  id: 'JavaScriptMiddle'
+  id: 'JavaScriptMiddle',
+  alt: 'js-middle-image'
 };
 
 const JavaScriptSenior = {
   name: 'Продвинутый JavaScript',
   level: 'продвинутый',
   students: 25,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 46,
   price: '200$',
-  id: 'JavaScriptSenior'
+  id: 'JavaScriptSenior',
+  alt: 'js-senior-image'
 };
 
 const CPlusJun = {
   name: 'Основы C++',
   level: 'начальный',
   students: 25,
-  image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 112,
   price: '54$',
-  id: 'CPlusJun'
+  id: 'CPlusJun',
+  alt: 'cplus-start-image'
 };
 
 const CPlusMiddle = {
   name: 'Средний C++',
   level: 'средний',
   students: 30,
-  image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 78,
   price: '90$',
-  id: 'CPlusMiddle'
+  id: 'CPlusMiddle',
+  alt: 'cplus-middle-image'
 };
 
 const CPlusSenior = {
   name: 'Продвинутый C++',
   level: 'продвинутый',
   students: 15,
-  image: 'https://drive.google.com/open?id=1ku0EdQoBMPctCguAJExTPTbBd9kWKtvB',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 321,
   price: '165$',
-  id: 'CPlusSenior'
+  id: 'CPlusSenior',
+  alt: 'cplus-senior-image'
 };
 
 const SQLJun = {
   name: 'Основы SQL',
   level: 'начальный',
   students: 10,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/LhjVk7J/javascript3-img-start.png',
   well_students: 245,
   price: '76$',
-  id: 'SQLJun'
+  id: 'SQLJun',
+  alt: 'sql-start-image'
 };
 
 const SQLMiddle = {
   name: 'Средний SQL',
   level: 'средний',
   students: 20,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/LhjVk7J/javascript3-img-start.png',
   well_students: 54,
   price: '90$',
-  id: 'SQLMiddle'
+  id: 'SQLMiddle',
+  alt: 'sql-middle-image'
 };
 
 const SQLSenior = {
   name: 'Продвинутый SQL',
   level: 'продвинутый',
   students: 15,
-  image: 'https://drive.google.com/open?id=1x3NNi4-2zd2XYkYMQfW925bxPFT4dtxT',
+  image: 'https://i.ibb.co/LhjVk7J/javascript3-img-start.png',
   well_students: 321,
   price: '165$',
-  id: 'SQLSenior'
+  id: 'SQLSenior',
+  alt: 'sql-senior-image'
 };
 
 const HTMLCSSJun = {
   name: 'Основы HTML и CSS',
   level: 'начальный',
   students: 30,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 300,
   price: '50$',
-  id: 'HTMLCSSJun'
+  id: 'HTMLCSSJun',
+  alt: 'html-start-image'
 };
 
 const HTMLCSSMiddle = {
   name: 'Средний HTML и CSS',
   level: 'средний',
   students: 20,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 243,
   price: '100$',
-  id: 'HTMLCSSMiddle'
+  id: 'HTMLCSSMiddle',
+  alt: 'html-middle-image'
 };
 
 const HTMLCSSSenior = {
   name: 'Продвинутый HTML и CSS',
   level: 'продвинутый',
   students: 15,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/4MXYPG1/java-img-start.png',
   well_students: 114,
   price: '165$',
-  id: 'HTMLCSSSenior'
+  id: 'HTMLCSSSenior',
+  alt: 'html-senior-image'
 };
 
 const PythonJun = {
   name: 'Основы Python',
   level: 'начальный',
   students: 10,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/D4p9WLx/csharp-img-start.png',
   well_students: 60,
   price: '70$',
-  id: 'PythonJun'
+  id: 'PythonJun',
+  alt: 'python-start-image'
 };
 
 const PythonMiddle = {
   name: 'Средний Python',
   level: 'средний',
   students: 7,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/D4p9WLx/csharp-img-start.png',
   well_students: 80,
   price: '100$',
-  id: 'PythonMiddle'
+  id: 'PythonMiddle',
+  alt: 'python-middle-image'
 };
 
 const PythonSenior = {
   name: 'Продвинутый Python',
   level: 'продвинутый',
   students: 5,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/D4p9WLx/csharp-img-start.png',
   well_students: 40,
   price: '200$',
-  id: 'PythonSenior'
+  id: 'PythonSenior',
+  alt: 'python-senior-image'
 };
 
 const AndroidJun = {
   name: 'Основы AndroidDev',
   level: 'начальный',
   students: 40,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 253,
   price: '50$',
-  id: 'AndroidJun'
+  id: 'AndroidJun',
+  alt: 'android-senior-image'
 };
 
 const AndroidMiddle = {
   name: 'Средний AndroidDev',
   level: 'средний',
   students: 35,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 157,
   price: '100$',
-  id: 'AndroidMiddle'
+  id: 'AndroidMiddle',
+  alt: 'android-middle-image'
 };
 
 const AndroidSenior = {
   name: 'Продвинутый AndroidDev',
   level: 'продвинутый',
   students: 30,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/TvtKBx0/javascript1-img-start.png',
   well_students: 47,
   price: '150$',
-  id: 'AndroidSenior'
+  id: 'AndroidSenior',
+  alt: 'android-senior-image'
 };
 
 const iOSJun = {
   name: 'Основы iOSDev',
   level: 'начальный',
   students: 50,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 263,
   price: '70$',
-  id: 'iOSJun'
+  id: 'iOSJun',
+  alt: 'ios-start-image'
 };
 
 const iOSMiddle = {
   name: 'Средний iOSDev',
   level: 'средний',
   students: 25,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 117,
   price: '120$',
-  id: 'iOSMiddle'
+  id: 'iOSMiddle',
+  alt: 'ios-middle-image'
 };
 
 const iOSSenior = {
   name: 'Продвинутый iOSDev',
   level: 'продвинутый',
   students: 10,
-  image: 'https://drive.google.com/open?id=1xE-LpAfL7t6J_HrjA8xzdKJI9TGPYdR_',
+  image: 'https://i.ibb.co/j3B4GW4/javascript2-img-start.png',
   well_students: 76,
   price: '170$',
-  id: 'iOSSenior'
+  id: 'iOSSenior',
+  alt: 'ios-senior-image'
 };
 
 const setJavaJun = localStorage.setItem('JavaJun', JSON.stringify(JavaJun));

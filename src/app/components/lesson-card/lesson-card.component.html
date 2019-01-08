@@ -1,4 +1,4 @@
-<a [routerLink]="['lesson', item.id]" *ngFor="let item of items">
+<a [routerLink]="['/lesson', item.id]" *ngFor="let item of items">
   <div class="card card_margin card__style card__style_hover card__size">
     <div class="card-header card-header__size card-header_back-style">
       <p class="card-header__main">{{item.name}}</p>
@@ -6,7 +6,7 @@
         <span class="card-header__span">Уровень:</span> {{item.level}}</p>
     </div>
     <div class="card-image card-image__flex card-image__size">
-      <img class="card-image__img-Java" src="https://unsplash.it/300/200/?random" />
+      <img class="card-image__img-Java" src="{{item.image}}" alt="{{item.alt}}" title="{{item.alt}}"/>
     </div>
     <div class="card__hr"></div>
     <div class="card-info card-info_margin">

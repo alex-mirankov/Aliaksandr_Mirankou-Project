@@ -10,6 +10,7 @@ export class LessonPageMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

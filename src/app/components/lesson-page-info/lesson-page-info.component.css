@@ -8,6 +8,10 @@
     margin-top: 100px;
 }
 
+.content__size {
+    width: 80%;
+}
+
 .lesson-header__count {
     font-size: 1.28rem;
     color: #716d6d;

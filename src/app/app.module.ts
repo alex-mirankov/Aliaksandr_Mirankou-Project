@@ -40,10 +40,14 @@ import { LessonSideListComponent } from './components/lesson-side-list/lesson-si
 import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
 import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 import { LocalStoreService } from './services/local-store.service';
 import { GetCardsService } from './services/get-cards.service';
 import { ShareService } from './services/shared.service';
+import { LocalStoreLessonsService } from './services/local-store-lessons';
+import { GetLessonsService } from './services/get-lessons.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
@@ -97,11 +101,14 @@ const appRoutes: Routes = [
     LessonSideItemComponent,
     LessonSideHeaderComponent,
     NotFoundComponent,
+    PreloaderComponent,
   ],
   bootstrap: [AppComponent],
   providers: [LocalStoreService,
               GetCardsService,
-              ShareService
+              ShareService,
+              LocalStoreLessonsService,
+              GetLessonsService,
              ],
 })
 

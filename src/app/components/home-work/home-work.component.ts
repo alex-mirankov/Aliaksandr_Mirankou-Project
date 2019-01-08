@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetLessonsService } from '../../services/get-lessons.service';
 
 @Component({
   selector: 'app-home-work',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeWorkComponent implements OnInit {
 
-  constructor() { }
+  private lessons = this.array.lessons;
+  constructor(private array: GetLessonsService) { }
 
   ngOnInit() {
   }

@@ -1,5 +1,14 @@
 
 import { Injectable } from '@angular/core';
+
+function getPromiseLocalStorage(itemLocalStorage) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve(itemLocalStorage);
+        }, 5000);
+    }).then(() => console.log('successful')).catch(() => console.log(Error));
+}
+
 const getJavaJun = JSON.parse(localStorage.getItem('JavaJun'));
 const getJavaMiddle = JSON.parse(localStorage.getItem('JavaMiddle'));
 const getJavaSenior = JSON.parse(localStorage.getItem('JavaSenior'));
@@ -27,6 +36,36 @@ const getAndroidSenior = JSON.parse(localStorage.getItem('AndroidSenior'));
 const getIOSJun = JSON.parse(localStorage.getItem('iOSJun'));
 const getIOSMiddle = JSON.parse(localStorage.getItem('iOSMiddle'));
 const getIOSSenior = JSON.parse(localStorage.getItem('iOSSenior'));
+
+getPromiseLocalStorage(getJavaJun);
+getPromiseLocalStorage(getJavaMiddle);
+getPromiseLocalStorage(getJavaMiddle);
+getPromiseLocalStorage(getJavaSenior);
+getPromiseLocalStorage(getCSharpJun);
+getPromiseLocalStorage(getCSharpMiddle);
+getPromiseLocalStorage(getCSharpSenior);
+getPromiseLocalStorage(getJavaScriptJun);
+getPromiseLocalStorage(getJavaScriptMiddle);
+getPromiseLocalStorage(getJavaScriptSenior);
+getPromiseLocalStorage(getCPlusJun);
+getPromiseLocalStorage(getCPlusMiddle);
+getPromiseLocalStorage(getCPlusSenior);
+getPromiseLocalStorage(getSQLJun);
+getPromiseLocalStorage(getSQLMiddle);
+getPromiseLocalStorage(getSQLSenior);
+getPromiseLocalStorage(getHTMLCSSJun);
+getPromiseLocalStorage(getHTMLCSSMiddle);
+getPromiseLocalStorage(getHTMLCSSSenior);
+getPromiseLocalStorage(getPythonJun);
+getPromiseLocalStorage(getPythonMiddle);
+getPromiseLocalStorage(getPythonSenior);
+getPromiseLocalStorage(getAndroidJun);
+getPromiseLocalStorage(getAndroidMiddle);
+getPromiseLocalStorage(getAndroidSenior);
+getPromiseLocalStorage(getIOSJun);
+getPromiseLocalStorage(getIOSMiddle);
+getPromiseLocalStorage(getIOSSenior);
+
 @Injectable()
 export class GetCardsService {
 
@@ -36,8 +75,10 @@ export class GetCardsService {
     clearCards() {
         this.cards.length = 0;
     }
+
     getAllCards() {
         this.clearCards();
+        getPromiseLocalStorage(getJavaJun);
         this.cards.push(getJavaJun);
         this.cards.push(getJavaMiddle);
         this.cards.push(getJavaSenior);

@@ -1,12 +1,11 @@
-<div class="content content_margin">
+<div class="content content_margin" *ngFor = "let lesson of lessons">
   <div class="lesson-header">
-    <p class="lesson-header__name">Операторы ветвленния</p>
-    <p class="lesson-header__count">Занятие #3</p>
+    <p class="lesson-header__name">{{lesson.nameLesson}}</p>
+    <p class="lesson-header__count">{{lesson.countLesson}}</p>
   </div>
   <div class="lesson-description lesson-description_position">
     <p class="lesson-description__content">
-      По сложившийся ситуации традиции первая программа на изучаемом языке программирования должна выводить строку Hello, world.
-      Текст такой программы на Java выглядит следующим образом:
+        {{lesson.contentLesson}}
     </p>
   </div>
   <div class="example example_position example__size example_beauty">

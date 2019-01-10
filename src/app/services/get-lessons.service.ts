@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { FieldsLocalStoreService } from './fields-local-store.service';
+import { GetPromiseService } from './get-promise.service';
 
 @Injectable()
 export class GetLessonsService {
-  constructor() { }
+  constructor(private fieldsStore: FieldsLocalStoreService, private promiseService: GetPromiseService) { }
 
   public lessons = [];
 
@@ -12,191 +14,219 @@ export class GetLessonsService {
 
   getLessonJavaJun() {
     this.clearLesson();
-    this.lessons.push(getJavaJunLesson);
-    console.log(getJavaJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonJavaMiddle() {
     this.clearLesson();
-    this.lessons.push(getJavaMiddleLesson);
-    console.log(getJavaMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonJavaSenior() {
     this.clearLesson();
-    this.lessons.push(getJavaSeniorLesson);
-    console.log(getJavaSeniorLesson);
+    console.log('getLessonJavaSenior');
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCSharpJun() {
     this.clearLesson();
-    this.lessons.push(getCSharpJunLesson);
-    console.log(getCSharpJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCSharpJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCSharpMiddle() {
     this.clearLesson();
-    this.lessons.push(getCSharpMiddleLesson);
-    console.log(getCSharpMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCSharpMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCSharpSenior() {
     this.clearLesson();
-    this.lessons.push(getCSharpSeniorLesson);
-    console.log(getCSharpSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCSharpSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonJavaScriptJun() {
     this.clearLesson();
-    this.lessons.push(getJavaScriptJunLesson);
-    console.log(getJavaScriptJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaScriptJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonJavaScriptMiddle() {
     this.clearLesson();
-    this.lessons.push(getJavaScriptMiddleLesson);
-    console.log(getJavaScriptMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaScriptMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonJavaScriptSenior() {
     this.clearLesson();
-    this.lessons.push(getJavaScriptSeniorLesson);
-    console.log(getJavaScriptSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getJavaScriptSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCPlusJun() {
     this.clearLesson();
-    this.lessons.push(getCPlusJunLesson);
-    console.log(getCPlusJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCPlusJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCPlusMiddle() {
     this.clearLesson();
-    this.lessons.push(getCPlusMiddleLesson);
-    console.log(getCPlusMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCPlusMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonCPlusSenior() {
     this.clearLesson();
-    this.lessons.push(getCPlusSeniorLesson);
-    console.log(getCPlusSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getCPlusSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonSQLJun() {
     this.clearLesson();
-    this.lessons.push(getSQLJunLesson);
-    console.log(getSQLJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getSQLJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonSQLMiddle() {
     this.clearLesson();
-    this.lessons.push(getSQLMiddleLesson);
-    console.log(getSQLMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getSQLMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonSQLSenior() {
     this.clearLesson();
-    this.lessons.push(getSQLSeniorLesson);
-    console.log(getSQLSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getSQLSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonHTMLCSSJun() {
     this.clearLesson();
-    this.lessons.push(getHTMLCSSJunLesson);
-    console.log(getHTMLCSSJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getHTMLCSSJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonHTMLCSSMiddle() {
     this.clearLesson();
-    this.lessons.push(getHTMLCSSMiddleLesson);
-    console.log(getHTMLCSSMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getHTMLCSSMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonHTMLCSSSenior() {
     this.clearLesson();
-    this.lessons.push(getHTMLCSSSeniorLesson);
-    console.log(getHTMLCSSSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getHTMLCSSSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonPythonJun() {
     this.clearLesson();
-    this.lessons.push(getPythonJunLesson);
-    console.log(getPythonJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getPythonJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonPythonMiddle() {
     this.clearLesson();
-    this.lessons.push(getPythonMiddleLesson);
-    console.log(getPythonMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getPythonMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonPythonSenior() {
     this.clearLesson();
-    this.lessons.push(getPythonSeniorLesson);
-    console.log(getPythonSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getPythonSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonAndroidJun() {
     this.clearLesson();
-    this.lessons.push(getAndroidJunLesson);
-    console.log(getAndroidJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getAndroidJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonAndroidMiddle() {
     this.clearLesson();
-    this.lessons.push(getAndroidMiddleLesson);
-    console.log(getAndroidMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getAndroidMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonAndroidSenior() {
     this.clearLesson();
-    this.lessons.push(getAndroidSeniorLesson);
-    console.log(getAndroidSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getAndroidSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonIOSJun() {
     this.clearLesson();
-    this.lessons.push(getIOSJunLesson);
-    console.log(getIOSJunLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJunLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getIOSJunLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonIOSMiddle() {
     this.clearLesson();
-    this.lessons.push(getIOSMiddleLesson);
-    console.log(getIOSMiddleLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddleLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getIOSMiddleLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 
   getLessonIOSSenior() {
     this.clearLesson();
-    this.lessons.push(getIOSSeniorLesson);
-    console.log(getIOSSeniorLesson);
+    this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSeniorLesson)
+    .then(response => this.lessons.push(this.fieldsStore.getIOSSeniorLesson))
+    .catch(error => new Error(error));
+    return this.lessons;
   }
 }
 
-const getJavaJunLesson = JSON.parse(localStorage.getItem('JavaJunLesson'));
-const getJavaMiddleLesson = JSON.parse(localStorage.getItem('JavaMiddleLesson'));
-const getJavaSeniorLesson = JSON.parse(localStorage.getItem('JavaSeniorLesson'));
-const getCSharpJunLesson = JSON.parse(localStorage.getItem('CSharpJunLesson'));
-const getCSharpMiddleLesson = JSON.parse(localStorage.getItem(('CSharpMiddleLesson')));
-const getCSharpSeniorLesson = JSON.parse(localStorage.getItem('CSharpSeniorLesson'));
-const getJavaScriptJunLesson = JSON.parse(localStorage.getItem('JavaScriptJunLesson'));
-const getJavaScriptMiddleLesson = JSON.parse(localStorage.getItem('JavaScriptMiddleLesson'));
-const getJavaScriptSeniorLesson = JSON.parse(localStorage.getItem('JavaScriptSeniorLesson'));
-const getCPlusJunLesson = JSON.parse(localStorage.getItem('CPlusJunLesson'));
-const getCPlusMiddleLesson = JSON.parse(localStorage.getItem('CPlusMiddleLesson'));
-const getCPlusSeniorLesson = JSON.parse(localStorage.getItem('CPlusSeniorLesson'));
-const getSQLJunLesson = JSON.parse(localStorage.getItem('SQLJunLesson'));
-const getSQLMiddleLesson = JSON.parse(localStorage.getItem('SQLMiddleLesson'));
-const getSQLSeniorLesson = JSON.parse(localStorage.getItem('SQLSeniorLesson'));
-const getHTMLCSSJunLesson = JSON.parse(localStorage.getItem('HTMLCSSJunLesson'));
-const getHTMLCSSMiddleLesson = JSON.parse(localStorage.getItem('HTMLCSSMiddleLesson'));
-const getHTMLCSSSeniorLesson = JSON.parse(localStorage.getItem('HTMLCSSSeniorLesson'));
-const getPythonJunLesson = JSON.parse(localStorage.getItem('PythonJunLesson'));
-const getPythonMiddleLesson = JSON.parse(localStorage.getItem('PythonMiddleLesson'));
-const getPythonSeniorLesson = JSON.parse(localStorage.getItem('PythonSeniorLesson'));
-const getAndroidJunLesson = JSON.parse(localStorage.getItem('AndroidJunLesson'));
-const getAndroidMiddleLesson = JSON.parse(localStorage.getItem('AndroidMiddleLesson'));
-const getAndroidSeniorLesson = JSON.parse(localStorage.getItem('AndroidSeniorLesson'));
-const getIOSJunLesson = JSON.parse(localStorage.getItem('iOSJunLesson'));
-const getIOSMiddleLesson = JSON.parse(localStorage.getItem('iOSMiddleLesson'));
-const getIOSSeniorLesson = JSON.parse(localStorage.getItem('iOSSeniorLesson'));

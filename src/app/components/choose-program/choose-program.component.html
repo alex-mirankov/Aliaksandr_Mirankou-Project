@@ -1,19 +1,15 @@
-<div class="choose-program choose-program_margin choose-program_styles" id = "coursesLink">
+<div class="choose-program choose-program_margin choose-program_styles" id="coursesLink">
   <p class="choose-program__header">Выбери свою программу обучения</p>
   <div class="control control__size control__flex">
     <div class="mat-app-background basic-container">
-      <app-select-level 
-        (levelSelectChange) = "onChangeLevel($event)"
-        class="select-level select-level__beauty select-level__size select-level_font select-level_margin">
+      <app-select-level (levelSelectChange)="onChangeLevel($event)" class="select-level select-level__beauty select-level__size select-level_font select-level_margin">
       </app-select-level>
     </div>
     <div class="mat-app-background basic-container">
-      <app-select-theme
-       (themeSelectChange) = "onChangeTheme($event)"
-       class="select-level select-level__beauty select-level__size select-level_font select-level_margin">
+      <app-select-theme (themeSelectChange)="onChangeTheme($event)" class="select-level select-level__beauty select-level__size select-level_font select-level_margin">
       </app-select-theme>
     </div>
     <app-search></app-search>
   </div>
-  <button class="choose-program__button choose-program__button_hover" (click) = "getCards()">Начать обучение</button>
+  <button class="choose-program__button choose-program__button_hover" (click)="getCards()">Начать обучение</button>
 </div>

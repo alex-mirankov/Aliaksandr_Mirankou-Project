@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { FieldsLocalStoreService } from './fields-local-store.service';
+import { GetPromiseService } from './get-promise.service';
 
 @Injectable()
 export class GetNavLessonsService {
-    constructor() { }
+    constructor(private fieldsStore: FieldsLocalStoreService, private promiseService: GetPromiseService) { }
     public lessonNavigation = [];
 
     clearNav() {
@@ -11,84 +13,119 @@ export class GetNavLessonsService {
 
     getJavaNav() {
         this.clearNav();
-        this.lessonNavigation.push(getJavaLessonName1);
-        this.lessonNavigation.push(getJavaLessonName2);
-        this.lessonNavigation.push(getJavaLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getCSharpNav() {
         this.clearNav();
-        this.lessonNavigation.push(getCSharpLessonName1);
-        this.lessonNavigation.push(getCSharpLessonName2);
-        this.lessonNavigation.push(getCSharpLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCSharpLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCSharpLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCSharpLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getJavaScriptNav() {
         this.clearNav();
-        this.lessonNavigation.push(getJavaScriptLessonName1);
-        this.lessonNavigation.push(getJavaScriptLessonName2);
-        this.lessonNavigation.push(getJavaScriptLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaScriptLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaScriptLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getJavaScriptLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getCPlusNav() {
         this.clearNav();
-        this.lessonNavigation.push(getCPlusLessonName1);
-        this.lessonNavigation.push(getCPlusLessonName2);
-        this.lessonNavigation.push(getCPlusLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCPlusLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCPlusLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getCPlusLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getSQLNav() {
         this.clearNav();
-        this.lessonNavigation.push(getSQLLessonName1);
-        this.lessonNavigation.push(getSQLLessonName2);
-        this.lessonNavigation.push(getSQLLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getSQLLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getSQLLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getSQLLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getHTMLCSSNav() {
         this.clearNav();
-        this.lessonNavigation.push(getHTMLCSSLessonName1);
-        this.lessonNavigation.push(getHTMLCSSLessonName2);
-        this.lessonNavigation.push(getHTMLCSSLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getHTMLCSSLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getHTMLCSSLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getHTMLCSSLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getPythonNav() {
         this.clearNav();
-        this.lessonNavigation.push(getPythonLessonName1);
-        this.lessonNavigation.push(getPythonLessonName2);
-        this.lessonNavigation.push(getPythonLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getPythonLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getPythonLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getPythonLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getAndroidNav() {
         this.clearNav();
-        this.lessonNavigation.push(getAndroidLessonName1);
-        this.lessonNavigation.push(getAndroidLessonName2);
-        this.lessonNavigation.push(getAndroidLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getAndroidLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getAndroidLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getAndroidLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
     getIOSNav() {
         this.clearNav();
-        this.lessonNavigation.push(getIOSLessonName1);
-        this.lessonNavigation.push(getIOSLessonName2);
-        this.lessonNavigation.push(getIOSLessonName3);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSLessonName1)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getIOSLessonName1))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSLessonName2)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getIOSLessonName2))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSLessonName3)
+        .then(response => this.lessonNavigation.push(this.fieldsStore.getIOSLessonName3))
+        .catch(error => new Error(error));
+        return this.lessonNavigation;
     }
 }
-
-const getJavaLessonName1 = JSON.parse(localStorage.getItem('JavaLessonName1'));
-const getJavaLessonName2 = JSON.parse(localStorage.getItem('JavaLessonName2'));
-const getJavaLessonName3 = JSON.parse(localStorage.getItem('JavaLessonName3'));
-const getCSharpLessonName1 = JSON.parse(localStorage.getItem('CSharpLessonName1'));
-const getCSharpLessonName2 = JSON.parse(localStorage.getItem('CSharpLessonName2'));
-const getCSharpLessonName3 = JSON.parse(localStorage.getItem('CSharpLessonName3'));
-const getJavaScriptLessonName1 = JSON.parse(localStorage.getItem('JavaScriptLessonName1'));
-const getJavaScriptLessonName2 = JSON.parse(localStorage.getItem('JavaScriptLessonName2'));
-const getJavaScriptLessonName3 = JSON.parse(localStorage.getItem('JavaScriptLessonName3'));
-const getCPlusLessonName1 = JSON.parse(localStorage.getItem('CPlusLessonName1'));
-const getCPlusLessonName2 = JSON.parse(localStorage.getItem('CPlusLessonName2'));
-const getCPlusLessonName3 = JSON.parse(localStorage.getItem('CPlusLessonName3'));
-const getSQLLessonName1 = JSON.parse(localStorage.getItem('SQLLessonName1'));
-const getSQLLessonName2 = JSON.parse(localStorage.getItem('SQLLessonName2'));
-const getSQLLessonName3 = JSON.parse(localStorage.getItem('SQLLessonName3'));
-const getHTMLCSSLessonName1 = JSON.parse(localStorage.getItem('HTMLCSSLessonName1'));
-const getHTMLCSSLessonName2 = JSON.parse(localStorage.getItem('HTMLCSSLessonName2'));
-const getHTMLCSSLessonName3 = JSON.parse(localStorage.getItem('HTMLCSSLessonName3'));
-const getPythonLessonName1 = JSON.parse(localStorage.getItem('PythonLessonName1'));
-const getPythonLessonName2 = JSON.parse(localStorage.getItem('PythonLessonName2'));
-const getPythonLessonName3 = JSON.parse(localStorage.getItem('PythonLessonName3'));
-const getAndroidLessonName1 = JSON.parse(localStorage.getItem('AndroidLessonName1'));
-const getAndroidLessonName2 = JSON.parse(localStorage.getItem('AndroidLessonName2'));
-const getAndroidLessonName3 = JSON.parse(localStorage.getItem('AndroidLessonName3'));
-const getIOSLessonName1 = JSON.parse(localStorage.getItem('IOSLessonName1'));
-const getIOSLessonName2 = JSON.parse(localStorage.getItem('IOSLessonName2'));
-const getIOSLessonName3 = JSON.parse(localStorage.getItem('IOSLessonName3'));

@@ -1,4 +1,6 @@
-<div class="input-search input-search__beauty input-search__size">
-  <div class="input-search__icon"></div>
-  <input class="input-search__input" type="search" placeholder="Поиск..." />
-</div>
+<form (ngSubmit)="getSearch(search.value)">
+  <div class="input-search input-search__beauty input-search__size">
+    <div class="input-search__icon"></div>
+    <input class="input-search__input" #search type="search" placeholder="Поиск..." />
+  </div>
+</form>

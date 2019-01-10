@@ -14,19 +14,15 @@ export class LessonSideItemComponent implements OnInit {
   constructor(private array: GetNavLessonsService, private paths: PathFieldsService, private activeRouts: ActivatedRoute) {
     this.sub = activeRouts.params.subscribe(params => this.id = params['id']);
   }
-  private items = this.array.lessonNavigation;
-  private path = window.location.pathname;
+  private items: string[] = this.array.lessonNavigation;
+  private path: string = window.location.pathname;
   private valueFalse = false;
   private sub: Subscription;
   private id: string;
+  private toggle = false;
 
-  checkIt() {
-    console.log(this.path);
-    console.log(this.items);
-  }
-
-  loadLessonNavigation() {
-    switch (this.path) {
+  loadLessonNavigation(path) {
+    switch (path) {
       case this.paths.javaJun:
         this.array.getJavaNav();
         console.log(this.items);
@@ -138,7 +134,12 @@ export class LessonSideItemComponent implements OnInit {
     }
   }
 
+  color(id) {
+    console.log(id);
+    this.toggle = !this.toggle;
+  }
+
   ngOnInit() {
-    this.loadLessonNavigation();
+    this.loadLessonNavigation(this.path);
   }
 }

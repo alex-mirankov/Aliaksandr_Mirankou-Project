@@ -12,15 +12,18 @@ import { ActivatedRoute } from '@angular/router';
 export class LessonPageInfoComponent implements OnInit {
   private sub: Subscription;
   private id: string;
+  private pathCurrent: string;
 
   constructor(private array: GetLessonsService, private paths: PathFieldsService, private activeRouts: ActivatedRoute) {
-    this.sub = activeRouts.params.subscribe(params => this.id = params['id']);
+    this.sub = activeRouts.params.subscribe(params => {this.loadContentLesson(params.id); console.log(params.id); });
   }
-  private lessons = this.array.lessons;
-  private path = window.location.pathname;
+  private lessons: string[] = this.array.lessons;
 
-  loadContentLesson() {
-    switch (this.path) {
+  loadContentLesson(path) {
+    this.pathCurrent = window.location.pathname;
+    console.log(path);
+    console.log(this.pathCurrent);
+    switch (this.pathCurrent) {
       case this.paths.javaJun:
         this.array.getLessonJavaJun();
         break;
@@ -29,6 +32,7 @@ export class LessonPageInfoComponent implements OnInit {
         break;
       case this.paths.javaSenior:
         this.array.getLessonJavaSenior();
+        console.log('loadContentLesson');
         break;
       case this.paths.сSharpJun:
         this.array.getLessonCSharpJun();
@@ -106,7 +110,6 @@ export class LessonPageInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadContentLesson();
-    console.log(this.path);
+
   }
 }

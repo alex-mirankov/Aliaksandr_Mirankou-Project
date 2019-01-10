@@ -1,273 +1,627 @@
 import { Injectable } from '@angular/core';
+import { GetPromiseService } from './get-promise.service';
+import { FieldsLocalStoreService } from './fields-local-store.service';
 
-function getPromiseLocalStorage(itemLocalStorage) {
-    return new Promise(function (resolve, reject) {
-        setTimeout(function () {
-            resolve(itemLocalStorage);
-        }, 5000);
-    }).then(() => console.log('successful')).catch(() => console.log(Error));
-}
-
-const getJavaJun = JSON.parse(localStorage.getItem('JavaJun'));
-const getJavaMiddle = JSON.parse(localStorage.getItem('JavaMiddle'));
-const getJavaSenior = JSON.parse(localStorage.getItem('JavaSenior'));
-const getCSharpJun = JSON.parse(localStorage.getItem('CSharpJun'));
-const getCSharpMiddle = JSON.parse(localStorage.getItem(('CSharpMiddle')));
-const getCSharpSenior = JSON.parse(localStorage.getItem('CSharpSenior'));
-const getJavaScriptJun = JSON.parse(localStorage.getItem('JavaScriptJun'));
-const getJavaScriptMiddle = JSON.parse(localStorage.getItem('JavaScriptMiddle'));
-const getJavaScriptSenior = JSON.parse(localStorage.getItem('JavaScriptSenior'));
-const getCPlusJun = JSON.parse(localStorage.getItem('CPlusJun'));
-const getCPlusMiddle = JSON.parse(localStorage.getItem('CPlusMiddle'));
-const getCPlusSenior = JSON.parse(localStorage.getItem('CPlusSenior'));
-const getSQLJun = JSON.parse(localStorage.getItem('SQLJun'));
-const getSQLMiddle = JSON.parse(localStorage.getItem('SQLMiddle'));
-const getSQLSenior = JSON.parse(localStorage.getItem('SQLSenior'));
-const getHTMLCSSJun = JSON.parse(localStorage.getItem('HTMLCSSJun'));
-const getHTMLCSSMiddle = JSON.parse(localStorage.getItem('HTMLCSSMiddle'));
-const getHTMLCSSSenior = JSON.parse(localStorage.getItem('HTMLCSSSenior'));
-const getPythonJun = JSON.parse(localStorage.getItem('PythonJun'));
-const getPythonMiddle = JSON.parse(localStorage.getItem('PythonMiddle'));
-const getPythonSenior = JSON.parse(localStorage.getItem('PythonSenior'));
-const getAndroidJun = JSON.parse(localStorage.getItem('AndroidJun'));
-const getAndroidMiddle = JSON.parse(localStorage.getItem('AndroidMiddle'));
-const getAndroidSenior = JSON.parse(localStorage.getItem('AndroidSenior'));
-const getIOSJun = JSON.parse(localStorage.getItem('iOSJun'));
-const getIOSMiddle = JSON.parse(localStorage.getItem('iOSMiddle'));
-const getIOSSenior = JSON.parse(localStorage.getItem('iOSSenior'));
-
-getPromiseLocalStorage(getJavaJun);
-getPromiseLocalStorage(getJavaMiddle);
-getPromiseLocalStorage(getJavaMiddle);
-getPromiseLocalStorage(getJavaSenior);
-getPromiseLocalStorage(getCSharpJun);
-getPromiseLocalStorage(getCSharpMiddle);
-getPromiseLocalStorage(getCSharpSenior);
-getPromiseLocalStorage(getJavaScriptJun);
-getPromiseLocalStorage(getJavaScriptMiddle);
-getPromiseLocalStorage(getJavaScriptSenior);
-getPromiseLocalStorage(getCPlusJun);
-getPromiseLocalStorage(getCPlusMiddle);
-getPromiseLocalStorage(getCPlusSenior);
-getPromiseLocalStorage(getSQLJun);
-getPromiseLocalStorage(getSQLMiddle);
-getPromiseLocalStorage(getSQLSenior);
-getPromiseLocalStorage(getHTMLCSSJun);
-getPromiseLocalStorage(getHTMLCSSMiddle);
-getPromiseLocalStorage(getHTMLCSSSenior);
-getPromiseLocalStorage(getPythonJun);
-getPromiseLocalStorage(getPythonMiddle);
-getPromiseLocalStorage(getPythonSenior);
-getPromiseLocalStorage(getAndroidJun);
-getPromiseLocalStorage(getAndroidMiddle);
-getPromiseLocalStorage(getAndroidSenior);
-getPromiseLocalStorage(getIOSJun);
-getPromiseLocalStorage(getIOSMiddle);
-getPromiseLocalStorage(getIOSSenior);
 
 @Injectable()
 export class GetCardsService {
 
-    constructor() { }
+    constructor(private promiseService: GetPromiseService, private fieldsStore: FieldsLocalStoreService) { }
 
-    public cards = [];
+    public cards: string[] = [];
     clearCards() {
         this.cards.length = 0;
     }
 
     getAllCards() {
         this.clearCards();
-        getPromiseLocalStorage(getJavaJun);
-        this.cards.push(getJavaJun);
-        this.cards.push(getJavaMiddle);
-        this.cards.push(getJavaSenior);
-        this.cards.push(getCSharpJun);
-        this.cards.push(getCSharpMiddle);
-        this.cards.push(getCSharpSenior);
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getJavaScriptSenior);
-        this.cards.push(getCPlusJun);
-        this.cards.push(getCPlusMiddle);
-        this.cards.push(getCPlusSenior);
-        this.cards.push(getSQLJun);
-        this.cards.push(getSQLMiddle);
-        this.cards.push(getSQLSenior);
-        this.cards.push(getHTMLCSSJun);
-        this.cards.push(getHTMLCSSMiddle);
-        this.cards.push(getHTMLCSSSenior);
-        this.cards.push(getPythonJun);
-        this.cards.push(getPythonMiddle);
-        this.cards.push(getPythonSenior);
-        this.cards.push(getAndroidJun);
-        this.cards.push(getAndroidMiddle);
-        this.cards.push(getAndroidSenior);
-        this.cards.push(getIOSJun);
-        this.cards.push(getIOSMiddle);
-        this.cards.push(getIOSSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJun)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJun)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJun)
+        .then(response => this.cards.push(this.fieldsStore.getSQLJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSenior)
+        .then(response => this.cards.push(this.fieldsStore.getSQLSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJun)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJun)
+        .then(response => this.cards.push(this.fieldsStore.getPythonJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getPythonMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSenior)
+        .then(response => this.cards.push(this.fieldsStore.getPythonSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJun)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSenior)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJun)
+        .then(response => this.cards.push(this.fieldsStore.getIOSJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getIOSMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getIOSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getBaseJun() {
         this.clearCards();
-        this.cards.push(getSQLJun);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJun)
+        .then(response => this.cards.push(this.fieldsStore.getSQLJun))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getBaseMiddle() {
         this.clearCards();
-        this.cards.push(getSQLMiddle);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getSQLMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getBaseSenior() {
         this.clearCards();
-        this.cards.push(getSQLSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSenior)
+        .then(response => this.cards.push(this.fieldsStore.getSQLSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getWebJun() {
         this.clearCards();
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getHTMLCSSJun);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJun)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSJun))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getWebMiddle() {
         this.clearCards();
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getHTMLCSSMiddle);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getWebSenior() {
         this.clearCards();
-        this.cards.push(getJavaScriptSenior);
-        this.cards.push(getHTMLCSSSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getProgrammerLangJun() {
         this.clearCards();
-        this.cards.push(getJavaJun);
-        this.cards.push(getCSharpJun);
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getCPlusJun);
-        this.cards.push(getPythonJun);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJun)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJun)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJun)
+        .then(response => this.cards.push(this.fieldsStore.getPythonJun))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getProgrammerLangMiddle() {
         this.clearCards();
-        this.cards.push(getJavaMiddle);
-        this.cards.push(getCSharpMiddle);
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getCPlusMiddle);
-        this.cards.push(getPythonMiddle);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getPythonMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getProgrammerLangSenior() {
         this.clearCards();
-        this.cards.push(getJavaSenior);
-        this.cards.push(getCSharpSenior);
-        this.cards.push(getJavaScriptSenior);
-        this.cards.push(getCPlusSenior);
-        this.cards.push(getPythonSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSenior)
+        .then(response => this.cards.push(this.fieldsStore.getPythonSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getMobileDevJun() {
         this.clearCards();
-        this.cards.push(getAndroidJun);
-        this.cards.push(getIOSJun);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJun)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJun)
+        .then(response => this.cards.push(this.fieldsStore.getIOSJun))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getMobileDevMiddle() {
         this.clearCards();
-        this.cards.push(getAndroidMiddle);
-        this.cards.push(getIOSMiddle);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getIOSMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getMobileDevSenior() {
         this.clearCards();
-        this.cards.push(getAndroidSenior);
-        this.cards.push(getIOSSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSenior)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getIOSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllJun() {
         this.clearCards();
-        this.cards.push(getJavaJun);
-        this.cards.push(getCSharpJun);
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getCPlusJun);
-        this.cards.push(getSQLJun);
-        this.cards.push(getHTMLCSSJun);
-        this.cards.push(getPythonJun);
-        this.cards.push(getAndroidJun);
-        this.cards.push(getIOSJun);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJun)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJun)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJun)
+        .then(response => this.cards.push(this.fieldsStore.getSQLJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJun)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJun)
+        .then(response => this.cards.push(this.fieldsStore.getPythonJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJun)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJun)
+        .then(response => this.cards.push(this.fieldsStore.getIOSJun))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllMiddle() {
         this.clearCards();
-        this.cards.push(getJavaMiddle);
-        this.cards.push(getCSharpMiddle);
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getCPlusMiddle);
-        this.cards.push(getSQLMiddle);
-        this.cards.push(getHTMLCSSMiddle);
-        this.cards.push(getPythonMiddle);
-        this.cards.push(getAndroidMiddle);
-        this.cards.push(getIOSMiddle);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getSQLMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getPythonMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getIOSMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllSenior() {
         this.clearCards();
-        this.cards.push(getJavaSenior);
-        this.cards.push(getCSharpSenior);
-        this.cards.push(getJavaScriptSenior);
-        this.cards.push(getCPlusSenior);
-        this.cards.push(getSQLSenior);
-        this.cards.push(getHTMLCSSSenior);
-        this.cards.push(getPythonSenior);
-        this.cards.push(getAndroidSenior);
-        this.cards.push(getIOSSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSenior)
+        .then(response => this.cards.push(this.fieldsStore.getSQLSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSenior)
+        .then(response => this.cards.push(this.fieldsStore.getPythonSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSenior)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getIOSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllBase() {
         this.clearCards();
-        this.cards.push(getSQLJun);
-        this.cards.push(getSQLMiddle);
-        this.cards.push(getSQLSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJun)
+        .then(response => this.cards.push(this.fieldsStore.getSQLJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getSQLMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSenior)
+        .then(response => this.cards.push(this.fieldsStore.getSQLSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllWeb() {
         this.clearCards();
-        this.cards.push(getHTMLCSSJun);
-        this.cards.push(getHTMLCSSMiddle);
-        this.cards.push(getHTMLCSSSenior);
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getJavaScriptSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJun)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllProgrammingLang() {
         this.clearCards();
-        this.cards.push(getJavaJun);
-        this.cards.push(getJavaMiddle);
-        this.cards.push(getJavaSenior);
-        this.cards.push(getCSharpJun);
-        this.cards.push(getCSharpMiddle);
-        this.cards.push(getCSharpSenior);
-        this.cards.push(getJavaScriptJun);
-        this.cards.push(getJavaScriptMiddle);
-        this.cards.push(getJavaScriptSenior);
-        this.cards.push(getCPlusJun);
-        this.cards.push(getCPlusMiddle);
-        this.cards.push(getCPlusSenior);
-        this.cards.push(getPythonJun);
-        this.cards.push(getPythonMiddle);
-        this.cards.push(getPythonSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJun)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJun)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJun)
+        .then(response => this.cards.push(this.fieldsStore.getPythonJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getPythonMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSenior)
+        .then(response => this.cards.push(this.fieldsStore.getPythonSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
     getAllMobileDev() {
         this.clearCards();
-        this.cards.push(getAndroidJun);
-        this.cards.push(getAndroidMiddle);
-        this.cards.push(getAndroidSenior);
-        this.cards.push(getIOSJun);
-        this.cards.push(getIOSMiddle);
-        this.cards.push(getIOSSenior);
-        console.log(this.cards);
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJun)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSenior)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidSenior))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJun)
+        .then(response => this.cards.push(this.fieldsStore.getIOSJun))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getIOSMiddle))
+        .catch(error => new Error(error));
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getIOSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunJavaCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleJavaCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorJavaCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunCSharpCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpJun)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleCSharpCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorCSharpCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCSharpSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCSharpSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunJavaScriptCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptJun)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleJavaScriptCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorJavaScriptCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getJavaScriptSenior)
+        .then(response => this.cards.push(this.fieldsStore.getJavaScriptSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunCPlusCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusJun)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleCPlusCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorCPlusCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getCPlusSenior)
+        .then(response => this.cards.push(this.fieldsStore.getCPlusSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunSQLCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLJun)
+        .then(response => this.cards.push(this.fieldsStore.getSQLJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleSQLCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getSQLMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorSQLCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getSQLSenior)
+        .then(response => this.cards.push(this.fieldsStore.getSQLSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunHTMLCSSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSJun)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleHTMLCSSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorHTMLCSSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getHTMLCSSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getHTMLCSSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunPythonCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonJun)
+        .then(response => this.cards.push(this.fieldsStore.getPythonJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddlePythonCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getPythonMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorPythonCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getPythonSenior)
+        .then(response => this.cards.push(this.fieldsStore.getPythonSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunAndroidCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidJun)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleAndroidCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorAndroidCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getAndroidSenior)
+        .then(response => this.cards.push(this.fieldsStore.getAndroidSenior))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getJunIOSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSJun)
+        .then(response => this.cards.push(this.fieldsStore.getIOSJun))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getMiddleIOSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSMiddle)
+        .then(response => this.cards.push(this.fieldsStore.getIOSMiddle))
+        .catch(error => new Error(error));
+        return this.cards;
+    }
+    getSeniorIOSCard() {
+        this.clearCards();
+        this.promiseService.getPromiseLocalStorage(this.fieldsStore.getIOSSenior)
+        .then(response => this.cards.push(this.fieldsStore.getIOSSenior))
+        .catch(error => new Error(error));
+        return this.cards;
     }
 }

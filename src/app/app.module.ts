@@ -41,6 +41,7 @@ import { LessonSideItemComponent } from './components/lesson-side-item/lesson-si
 import { LessonSideHeaderComponent } from './components/lesson-side-header/lesson-side-header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
+import { NotFoundContentComponent } from './components/not-found-content/not-found-content.component';
 
 import { LocalStoreService } from './services/local-store.service';
 import { GetCardsService } from './services/get-cards.service';
@@ -52,6 +53,9 @@ import { GetNavLessonsService } from './services/get-nav-lessons';
 import { PathFieldsService } from './services/path-fields.service';
 import { NavNameLessonsService } from './services/local-store-nav-name.service';
 import { GetNavNameLessonsService } from './services/get-nav-name.service';
+import { NameCoursesSearchService } from './services/name-courses-search.service';
+import { GetPromiseService } from './services/get-promise.service';
+import { FieldsLocalStoreService } from './services/fields-local-store.service';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
@@ -106,6 +110,7 @@ const appRoutes: Routes = [
     LessonSideHeaderComponent,
     NotFoundComponent,
     PreloaderComponent,
+    NotFoundContentComponent,
   ],
   bootstrap: [AppComponent],
   providers: [LocalStoreService,
@@ -118,6 +123,9 @@ const appRoutes: Routes = [
               PathFieldsService,
               NavNameLessonsService,
               GetNavNameLessonsService,
+              NameCoursesSearchService,
+              GetPromiseService,
+              FieldsLocalStoreService,
              ],
 })
 

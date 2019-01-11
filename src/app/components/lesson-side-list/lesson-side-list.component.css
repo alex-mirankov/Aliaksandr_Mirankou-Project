@@ -1,9 +1,8 @@
-.progress-navigation-main {
-    padding: 25px 0 48px 20px;
-}
-
 .progress-navigation-main__p {
     color: #000000;
     font-family: 'Gilroy-ExtraBold';
     font-size: 1.7rem;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 10px; 
 }

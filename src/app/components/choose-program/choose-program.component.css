@@ -5,6 +5,7 @@
 
 .choose-program_styles{
     text-align: center;
+    min-width: 1170px;
 }
 
 .choose-program__button{
@@ -15,13 +16,10 @@
     cursor: pointer;
     display: block;
     margin: 200px auto 0 auto;
-
     color: #fffefe;
     font-family: 'Gilroy-ExtraBold';
-    /*font-size: 1.1rem;*/
     font-weight: 400;
     text-align: center;
-
     background-color: #fb901d;
     font-size: 1.28rem;
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);

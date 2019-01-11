@@ -1,5 +1,6 @@
 .content__beauty {
   background-color: #070b28;
+  padding-bottom: 300px;
 }
 
 .content__restriction-width {
@@ -18,6 +19,7 @@
 .container-404-error__size {
   width: 1170px;
   margin: 0 auto;
+  padding-left: 50px;
 }
 
 .error-404_padding {
@@ -102,7 +104,7 @@
 }
 
 .container-image__image-man {
-  width: 894px;
+  width: 800px;
   height: 720px;
   background: url("../../../images/man-not-found.png") no-repeat;
 }

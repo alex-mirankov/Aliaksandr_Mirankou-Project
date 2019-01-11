@@ -3,6 +3,7 @@ import { GetLessonsService } from '../../services/get-lessons.service';
 import { PathFieldsService } from '../../services/path-fields.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { GetPromiseService } from '../../services/get-promise.service';
 
 @Component({
   selector: 'app-lesson-page-info',
@@ -13,16 +14,20 @@ export class LessonPageInfoComponent implements OnInit {
   private sub: Subscription;
   private id: string;
   private pathCurrent: string;
+  private showLoader: boolean;
 
-  constructor(private array: GetLessonsService, private paths: PathFieldsService, private activeRouts: ActivatedRoute) {
-    this.sub = activeRouts.params.subscribe(params => {this.loadContentLesson(params.id); console.log(params.id); });
+  constructor(private array: GetLessonsService,
+    private paths: PathFieldsService,
+    private activeRouts: ActivatedRoute) {
+
+    this.sub = activeRouts.params.subscribe(params => {
+      this.loadContentLesson(params.id);
+    });
   }
   private lessons: string[] = this.array.lessons;
 
   loadContentLesson(path) {
     this.pathCurrent = window.location.pathname;
-    console.log(path);
-    console.log(this.pathCurrent);
     switch (this.pathCurrent) {
       case this.paths.javaJun:
         this.array.getLessonJavaJun();
@@ -32,7 +37,6 @@ export class LessonPageInfoComponent implements OnInit {
         break;
       case this.paths.javaSenior:
         this.array.getLessonJavaSenior();
-        console.log('loadContentLesson');
         break;
       case this.paths.сSharpJun:
         this.array.getLessonCSharpJun();

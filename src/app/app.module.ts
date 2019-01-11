@@ -34,7 +34,6 @@ import { RegistrationMainComponent } from './components/registration-main/regist
 import { LessonPageContentComponent } from './components/lesson-page-content/lesson-page-content.component';
 import { HomeWorkComponent } from './components/home-work/home-work.component';
 import { LessonPageInfoComponent } from './components/lesson-page-info/lesson-page-info.component';
-import { LessonPageCompileComponent } from './components/lesson-page-compile/lesson-page-compile.component';
 import { LessonSideComponent } from './components/lesson-side/lesson-side.component';
 import { LessonSideListComponent } from './components/lesson-side-list/lesson-side-list.component';
 import { LessonSideItemComponent } from './components/lesson-side-item/lesson-side-item.component';
@@ -103,7 +102,6 @@ const appRoutes: Routes = [
     LessonPageContentComponent,
     HomeWorkComponent,
     LessonPageInfoComponent,
-    LessonPageCompileComponent,
     LessonSideComponent,
     LessonSideListComponent,
     LessonSideItemComponent,

@@ -9,6 +9,11 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  login(login, password) {
+    if (login !== '' && password !== '') {
+      alert('Вход выполнен:' + login + ',' + password);
+    }
+  }
   ngOnInit() {
   }
 

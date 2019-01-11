@@ -74,6 +74,7 @@
     font-size: 1.28rem;
     font-weight: 400;
     cursor: pointer;
+    outline: none;
 }
 .form__submit_hover:hover{
     color: #6f6464;

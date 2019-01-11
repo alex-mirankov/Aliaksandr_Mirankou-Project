@@ -1,6 +1,5 @@
 <div class="progress-navigation-list progress-navigation-list_first progress-navigation-list__size" *ngFor = "let item of items">
-  <img class="progress-navigation-list__div" *ngIf = "valueFalse" src="https://i.ibb.co/QkXmSkp/progress-okay.png" alt="progress_okay" title="progress_okay" />
   <p class="progress-navigation-list__later-lesson-name">
-    <a [routerLink] = "['/lesson', item.id]" (click) = "color(item.id)">{{item.name}}</a>
+    <a class="progress-navigation-list__link" [routerLink] = "['/lesson', item.id]">{{item.name}}</a>
   </p>
 </div>

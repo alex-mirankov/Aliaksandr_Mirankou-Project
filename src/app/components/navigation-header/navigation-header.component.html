@@ -1,16 +1,16 @@
 <nav class="navigation">
   <ul class="navigation-list navigation-list_margin navigation-list_font">
-    <a class="navigation-list__link navigation-list__link_hover" routerLink="">
-      <li class="navigation-list__item">О проекте</li>
+    <a routerLink="" class="navigation-list__link navigation-list__link_hover">
+      <button class="navigation-list__item"><li>О проекте</li></button>
     </a>
-    <a class="navigation-list__link navigation-list__link_hover">
-      <li class="navigation-list__item">Ваши возможности</li>
+    <a [routerLink]="['']" fragment="coursesLink" (click)="anchorClick()" class="navigation-list__link navigation-list__link_hover">
+      <button class="navigation-list__item"><li>Ваши возможности</li></button>
     </a>
-    <a href="#coursesLink" target="_self" class="navigation-list__link navigation-list__link_hover">
-      <li class="navigation-list__item">Учебные курсы</li>
+    <a [routerLink]="['']" fragment="coursesLink" (click)="anchorClick()" class="navigation-list__link navigation-list__link_hover">
+      <button class="navigation-list__item"><li>Учебные курсы</li></button>
     </a>
-    <a href="#footerLink" target="_self" class="navigation-list__link navigation-list__link_hover">
-      <li class="navigation-list__item">Контакты</li>
+    <a [routerLink]="['']" fragment="footerLink" (click)="anchorClick()" class="navigation-list__link navigation-list__link_hover">
+      <button class="navigation-list__item"><li>Контакты</li></button>
     </a>
   </ul>
 </nav>

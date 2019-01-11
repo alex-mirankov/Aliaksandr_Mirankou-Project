@@ -8,10 +8,10 @@
             <input type="text" class="form__input" id="form__input-id-last-name" name="form__input-last-name" placeholder="Ваша фамилия">
             <input type="text" class="form__input" id="form__input-id-third-name" name="form__input-third-name" placeholder="Ваше отчество">
             <input type="email" class="form__input" id="form__input-id-email" name="form__input-email" placeholder="Ваша электронная почта">
-            <input type="text" class="form__input" id="form__input-id-nickname" name="form__input-nickname" placeholder="Придумайте никнейм">
-            <input type="password" class="form__input" id="form__input-id-password" name="form__input-password" placeholder="Придумайте пароль">
-            <input type="password" class="form__input"  id="form__input-id-repeat-password" name="form__input-repeat-password" placeholder="Повторите пароль">
-            <input type="submit" class="form__submit form__submit_hover" id="form__submit-id-submit" name="form__submit-id-submit" value="Зарегистрироваться">
+            <input type="text" class="form__input" id="form__input-id-nickname" name="form__input-nickname" #nickName placeholder="Придумайте никнейм">
+            <input type="password" class="form__input" id="form__input-id-password" name="form__input-password" #password placeholder="Придумайте пароль">
+            <input type="password" class="form__input"  id="form__input-id-repeat-password" name="form__input-repeat-password" #passwordRepeat placeholder="Повторите пароль">
+            <input type="submit" (click)="registration(nickName.value, password.value, passwordRepeat.value)" class="form__submit form__submit_hover" id="form__submit-id-submit" name="form__submit-id-submit" value="Зарегистрироваться">
         </form>
     </section>
 </main>

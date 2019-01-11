@@ -27,22 +27,3 @@
 .lesson-description_position {
     margin-top: 50px;
 }
-
-.example_position {
-    margin-top: 70px;
-}
-
-.example__size {
-    height: 166px;
-    width: 500px;
-}
-
-.example_beauty {
-    background: #f5f5f5;
-    overflow-x: scroll;
-}
-
-.example__code {
-    color: rgb(168, 165, 165);
-    font-size: 1rem;
-}
